@@ -1,0 +1,5 @@
+Design a webpage for getting Name, Mobile Number, Email and Password of a person. 
+Write a PHP program to validate the following 
+a. Mobile Number must be a positive integer and its length is 10 
+b. Email validation  
+c. Password contains special characters and numbers

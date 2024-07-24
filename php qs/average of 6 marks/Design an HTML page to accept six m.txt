@@ -1,0 +1,1 @@
+Design an HTML page to accept six marks and write PHP code to find the average  

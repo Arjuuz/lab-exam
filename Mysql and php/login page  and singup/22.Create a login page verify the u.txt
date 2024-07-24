@@ -1,0 +1,4 @@
+22.Create a login page verify the username and password provide provision to
+create new user in the login page. If log is successful redirect to new page.
+otherwise show the error message
+[Hint: create a table which contain username and password ]

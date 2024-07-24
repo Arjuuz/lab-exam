@@ -1,0 +1,2 @@
+Create a table employee (empno, name, mobile, email) and insert ten records. Design a 
+PHP page for searching with name.

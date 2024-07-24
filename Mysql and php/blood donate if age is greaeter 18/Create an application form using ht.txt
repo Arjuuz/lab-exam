@@ -1,0 +1,3 @@
+Create an application form using html which contains Name, Address, Dob, Gender, 
+Mobile No, Blood Group. Write a PHP code to save the data only if the applicant is greater 
+than eighteen years old.

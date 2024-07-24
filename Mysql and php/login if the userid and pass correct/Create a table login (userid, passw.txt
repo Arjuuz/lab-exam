@@ -1,0 +1,3 @@
+Create a table login (userid, password, role, visit_count) and insert five records, role must 
+be admin or user and visit_count is zero for all users to start with. Write a PHP code to 
+login with valid userid and password and update the visit count field in each visit by one. 

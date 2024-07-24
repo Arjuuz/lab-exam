@@ -1,0 +1,2 @@
+Create tables book (bookid, title, author) and issue (issue_date, bookid, student_name). 
+Insert ten rows to book table and write a PHP code to issue the books 
