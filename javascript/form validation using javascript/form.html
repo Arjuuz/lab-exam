@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validation</title>
+    <script>
+        function validate() {
+            var name = document.getElementById('name').value;
+            var address = document.getElementById('address').value;
+            var bloodGroup = document.getElementById('bloodgroup').value;
+            var dob = document.getElementById('dob').value;
+            var mobile = document.getElementById('mob').value;
+            var aadhar = document.getElementById('adhaar').value;
+            var email = document.getElementById('email').value;
+
+            if (name === "") {
+                alert("Name should not be empty");
+                return false; // Prevent form submission
+            }
+            if (address === "") {
+                alert("Address should not be empty");
+                return false; // Prevent form submission
+            }
+            if (bloodGroup === "") {
+                alert("Blood Group should not be empty");
+                return false; // Prevent form submission
+            }
+            if (dob === "") {
+                alert("DOB should not be empty");
+                return false; // Prevent form submission
+            }
+            if (mobile === "" || isNaN(mobile) || mobile.length < 10) {
+                alert("Mobile number should not be empty, should be 10 digits, and should be numbers");
+                return false; // Prevent form submission
+            }
+            if (aadhar === "" || aadhar.length < 12) {
+                alert("Aadhar number should not be empty and should be of 12 digits");
+                return false; // Prevent form submission
+            }
+            if (email === "") {
+                alert("Email should not be empty");
+                return false; // Prevent form submission
+            }
+
+            // Age validation
+            var birthdate = new Date(dob);
+            var today = new Date();
+            var age = today.getFullYear() - birthdate.getFullYear();
+            var diffMonth = today.getMonth() - birthdate.getMonth();
+            var diffDay = today.getDate() - birthdate.getDate();
+            if (diffMonth < 0 || (diffMonth === 0 && diffDay < 0)) {
+                age--;
+            }
+            if (age < 18) {
+                alert("Age should be greater than 18");
+            }
+
+            return true; // Allow form submission if all validations pass
+        }
+    </script>
+</head>
+<body>
+    <form action="" name="myForm" method="post" onsubmit="return validate()">
+        Name: <input type="text" name="name" id="name"><br><br>
+        Address: <textarea rows="5" cols="34" id="address"></textarea><br><br>
+        Blood Group: <input type="text" id="bloodgroup"><br><br>
+        DOB: <input type="date" id="dob"><br><br>
+        Mobile Number: <input type="text" id="mob"><br><br>
+        Aadhar Number: <input type="text" id="adhaar"><br><br>
+        Email ID: <input type="text" id="email"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
